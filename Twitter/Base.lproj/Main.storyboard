@@ -148,13 +148,13 @@
         <!--Tweet View Controller-->
         <scene sceneID="cgj-lY-lIT">
             <objects>
-                <viewController id="nVF-i4-DB0" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="nVF-i4-DB0" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lpv-TF-rzd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Text here" textAlignment="natural" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-Re-IMi">
-                                <rect key="frame" x="0.0" y="62" width="375" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text here" textAlignment="natural" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-Re-IMi">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -167,6 +167,7 @@
                             <constraint firstItem="afQ-Re-IMi" firstAttribute="leading" secondItem="j59-8f-4Uw" secondAttribute="leading" id="0uC-lf-Mc7"/>
                             <constraint firstItem="j59-8f-4Uw" firstAttribute="trailing" secondItem="afQ-Re-IMi" secondAttribute="trailing" id="4fm-v3-iCZ"/>
                             <constraint firstItem="afQ-Re-IMi" firstAttribute="top" secondItem="j59-8f-4Uw" secondAttribute="top" id="TdV-1V-y59"/>
+                            <constraint firstItem="j59-8f-4Uw" firstAttribute="bottom" secondItem="afQ-Re-IMi" secondAttribute="bottom" id="xbr-5f-2kn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Ao-eG-LFW">
@@ -216,10 +217,10 @@
         <!--Tweet Navigation Controller-->
         <scene sceneID="vuF-x7-x0P">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="avu-TL-FnQ" userLabel="Tweet Navigation Controller" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="avu-TL-FnQ" userLabel="Tweet Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBW-2X-EkO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.2941176593" green="0.61960786580000005" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.2941176593" green="0.61960786580000005" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

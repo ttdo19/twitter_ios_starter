@@ -32,6 +32,7 @@ class TweetViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tweetTextView.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
     
