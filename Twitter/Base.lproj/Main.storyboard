@@ -188,22 +188,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text here" textAlignment="natural" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-Re-IMi">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-Re-IMi">
+                                <rect key="frame" x="0.0" y="44" width="375" height="539"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVu-Xd-BSc" userLabel="Remaining Char">
+                                <rect key="frame" x="20" y="613" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j59-8f-4Uw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="afQ-Re-IMi" firstAttribute="leading" secondItem="j59-8f-4Uw" secondAttribute="leading" id="0uC-lf-Mc7"/>
                             <constraint firstItem="j59-8f-4Uw" firstAttribute="trailing" secondItem="afQ-Re-IMi" secondAttribute="trailing" id="4fm-v3-iCZ"/>
+                            <constraint firstItem="AVu-Xd-BSc" firstAttribute="top" secondItem="afQ-Re-IMi" secondAttribute="bottom" constant="30" id="Hej-hx-xwr"/>
+                            <constraint firstItem="j59-8f-4Uw" firstAttribute="bottom" secondItem="AVu-Xd-BSc" secondAttribute="bottom" constant="30" id="MDD-H4-FSM"/>
                             <constraint firstItem="afQ-Re-IMi" firstAttribute="top" secondItem="j59-8f-4Uw" secondAttribute="top" id="TdV-1V-y59"/>
+                            <constraint firstItem="AVu-Xd-BSc" firstAttribute="leading" secondItem="j59-8f-4Uw" secondAttribute="leading" constant="20" id="wGl-me-8XI"/>
                             <constraint firstItem="j59-8f-4Uw" firstAttribute="bottom" secondItem="afQ-Re-IMi" secondAttribute="bottom" id="xbr-5f-2kn"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xbr-5f-2kn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="0Ao-eG-LFW">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="onZ-J8-WRB">
@@ -220,12 +233,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="remainingChar" destination="AVu-Xd-BSc" id="Hr8-S1-8DK"/>
                         <outlet property="tweetTextView" destination="afQ-Re-IMi" id="2nJ-MJ-9iN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MwS-Q3-1IA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="3034"/>
+            <point key="canvasLocation" x="245.59999999999999" y="3033.7331334332835"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3hR-dZ-ANB">
