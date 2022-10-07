@@ -163,13 +163,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="Aao-B9-PLC">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="zdo-QH-rha">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onLogout:" destination="Rbk-Qe-0ig" id="vUL-sQ-JcZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="84d-I8-OqE">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" image="edit-icon" style="plain" id="84d-I8-OqE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="avu-TL-FnQ" kind="presentation" id="hNS-De-5sU"/>
                             </connections>
@@ -219,14 +219,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="0Ao-eG-LFW">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="onZ-J8-WRB">
-                            <color key="tintColor" systemColor="labelColor"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" image="close-icon" style="plain" id="onZ-J8-WRB">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cancel:" destination="nVF-i4-DB0" id="7Kc-JK-Vt1"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="qZW-xe-jYf">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="tweet:" destination="nVF-i4-DB0" id="7he-EH-q42"/>
                             </connections>
@@ -285,11 +285,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close-icon" width="26" height="24"/>
+        <image name="edit-icon" width="30" height="27"/>
         <image name="favor-icon" width="30" height="30"/>
         <image name="retweet-icon" width="30" height="30"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
