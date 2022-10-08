@@ -96,4 +96,12 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
             failure(error)
         })
     }
+    
+//    func getUser(parameters: [Any], success: @escaping () -> (), failure: @escaping (Error) -> () ) {
+//        let url = "https://api.twitter.com/1.1/account/update_profile.json"
+//        TwitterAPICaller.client?.post(url, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in success(response as! [NSDictionary])
+//        }, failure: { (task: URLSessionDataTask?, error: Error) in
+//            failure(error)
+//        })
+//    }
 }

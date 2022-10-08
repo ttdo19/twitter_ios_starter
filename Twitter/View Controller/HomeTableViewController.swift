@@ -12,7 +12,6 @@ class HomeTableViewController: UITableViewController {
 
     var tweetArray = [NSDictionary]()
     var numberOfTweet: Int!
-    
     let myRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -88,12 +87,28 @@ class HomeTableViewController: UITableViewController {
         let user = tweetArray[indexPath.row]["user"] as! NSDictionary
         cell.userNameLabel.text = user["name"] as? String
         cell.tweetContent.text = tweetArray[indexPath.row]["text"] as? String
+        cell.favCount.text = String((tweetArray[indexPath.row]["favorite_count"] as? Int)!)
+        cell.retweetCount.text = String((tweetArray[indexPath.row]["retweet_count"] as? Int)!)
         
         let imageURL = URL(string: (user["profile_image_url_https"] as? String)!)
         let data = try? Data(contentsOf: imageURL!)
         
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
+        }
+        
+        let entities = tweetArray[indexPath.row]["entities"] as! NSDictionary
+        if let media = entities["media"] as? [NSDictionary] {
+            if (!media.isEmpty) {
+                print(media)
+                let mediaString = media.first?["media_url_https"] as! String
+                let mediaURL = URL(string: mediaString)
+                let data1 = try? Data(contentsOf: mediaURL!)
+                
+                if let mediaData = data1 {
+                    cell.mediaImage.image = UIImage(data: mediaData)
+                }
+            }
         }
         
         cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)

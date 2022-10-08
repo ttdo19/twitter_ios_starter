@@ -8,8 +8,13 @@
 
 import UIKit
 
+
 class TweetTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var retweetCount: UILabel!
+    @IBOutlet weak var favCount: UILabel!
+    @IBOutlet weak var mediaImage: UIImageView!
     @IBOutlet weak var retweetButton: UIButton!
     @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -63,6 +68,7 @@ class TweetTableViewCell: UITableViewCell {
                 print("Unfavorite did not succeed: \(error)")
             })
         }
+
     }
     
     @IBAction func retweet(_ sender: Any) {
